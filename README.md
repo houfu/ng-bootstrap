@@ -34,6 +34,21 @@ View all the directives in action at https://ng-bootstrap.github.io
 * [Bootstrap 4](https://www.getbootstrap.com) (tested with 4.0.0)
 
 ## Installation
+###0. Install Dependencies
+* Install [Angular](https://angular.io/guide/quickstart)
+* Install Bootstrap 4
+```shell
+npm install --save bootstrap
+```
+Once bootstrap has installed, reference its css from your `styles.css` file:
+```typescript
+@import "../node_modules/bootstrap/dist/css/bootstrap.css"
+```
+**Note:** **Bootstrap Javascript files are not required.** 
+The goal of ng-bootstrap is to *completely replace* JavaScript implementation for components. 
+There is no need to include the Bootstrap Javascript scripts or other dependencies like jQuery or popper.js. 
+It is not necessary and might interfere with ng-bootstrap code.
+###1. Install ng-bootstrap
 After installing the above dependencies, install `ng-bootstrap` via:
 ```shell
 npm install --save @ng-bootstrap/ng-bootstrap

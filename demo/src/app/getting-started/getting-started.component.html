@@ -15,10 +15,12 @@
     </li>
   </ul>
 
-  <ngb-alert type="warning" [dismissible]="false">
-    <p>Should I add <b>bootstrap.js</b> or <b>bootstrap.min.js</b> to my project?</p>
-
-    No, the goal of ng-bootstrap is to <i>completely replace</i> JavaScript implementation for components. Nor should you include other dependencies like jQuery or popper.js. It is not necessary and might interfere with ng-bootstrap code.
+  <ngb-alert type="info" [dismissible]="false">
+    <p><strong>Bootstrap Javascript files are not required</strong></p>
+    <p>The goal of ng-bootstrap is to <i>completely replace</i> JavaScript implementation for components. There is no
+      need to include the Bootstrap Javascript scripts or other dependencies like jQuery or popper.js as described <a
+        href="https://getbootstrap.com/docs/4.0/getting-started/introduction/#js" target="_blank">here.</a> It is not
+      necessary and might interfere with ng-bootstrap code.</p>
   </ngb-alert>
 
   <h3>
@@ -33,14 +35,32 @@
   <h3>
     Installation
   </h3>
-  <p>After installing the above dependencies, install <code>ng-bootstrap</code> via: <br><code>npm install --save @ng-bootstrap/ng-bootstrap</code></p>
+  <h4>0: Install Dependencies</h4>
+  <p>Install <a href="https://angular.io/guide/quickstart" target="_blank">Angular</a>.</p>
+  <p>Install Bootstrap:</p>
+  <pre>npm install bootstrap</pre>
 
+  <p>
+    Once bootstrap has installed, reference its css from your `styles.css` file:
+  </p>
+  <pre>@import "../node_modules/bootstrap/dist/css/bootstrap.css"</pre>
+
+  <ngb-alert type="warning" [dismissible]="false">
+    <p>Should I add the Bootstrap JavaScript files e.g. <b>bootstrap.js</b> or <b>bootstrap.min.js</b>, to my project?
+    </p>
+
+    <p>No, the goal of ng-bootstrap is to <i>completely replace</i> JavaScript implementation for components. Nor should
+      you include other dependencies like jQuery or popper.js. It is not necessary and might interfere with ng-bootstrap
+      code.</p>
+  </ngb-alert>
+  <h4>1: Install ng-bootstrap</h4>
+  <p>Install <code>ng-bootstrap</code> via: <br><code>npm install --save @ng-bootstrap/ng-bootstrap</code></p>
   <p>Once installed you need to import our main module.</p>
   <pre>import &#123;NgbModule} from '@ng-bootstrap/ng-bootstrap';</pre>
   <p>
-    The only remaining part is to list the imported module in your root module and any additional application modules that make use
-    of the components in this library. The exact method will be slightly different for the root (top-level) module for which you
-    should end up with the code similar to (notice <code>NgbModule.forRoot()</code>):
+    The only remaining part is to list the imported module in your root module and any additional application
+    modules that make use of the components in this library. The exact method will be slightly different for the root
+    (top-level) module for which you should end up with the code similar to (notice <code>NgbModule.forRoot()</code>):
   </p>
   <pre>import &#123;NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
@@ -108,6 +128,7 @@ export class OtherModule &#123;
   </h3>
   <p>
     Please take a moment to read our
-    <a href="https://github.com/ng-bootstrap/ng-bootstrap/blob/master/CODE_OF_CONDUCT.md" target="_blank">Code of Conduct</a>.
+    <a href="https://github.com/ng-bootstrap/ng-bootstrap/blob/master/CODE_OF_CONDUCT.md" target="_blank">Code of
+      Conduct</a>.
   </p>
 </ngbd-page-wrapper>
